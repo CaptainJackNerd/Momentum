@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">    
+    <wrapper class="todo-list visible-block">
+      <h1 class="list-header">To-Do List</h1>
+      <div class="todo-list-container">
+        <input id="inputField" type="text"><button id="addToDo">+</button>
+        <div class="to-dos" id="toDoContainer"></div>
+      </div>
+    </wrapper>
+    
+    <div class="player-container visible-block">
+      <div class="music-player">
+        
+        <div class="player">
+          <div class="volumebtn"><button class="vol_control"></button></div>
+          <h2 id="title">Song Name</h2>
+          
+          <div class="progress-area">
+      <div class="progress-bar">
+        
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+          
+          <div class="controls">
+            <button class="previous" id="previous"><i class="fas fa-step-backward"></i></button>
+            <button class="play" id="play-pause"><i class="fas fa-play"></i></button>
+            <button class="next" id="next"><i class="fas fa-step-forward"></i></button>
+          </div>
+          <div class="slidecontainer">
+            <i class="fas fa-volume-down"></i>
+            <input class="volumeline" type="range" min="0" max="100" value="50">
+            <i class="fas fa-volume-up"></i>
+          </div>
+        </div>
+        <div class="playlist">
+          <h2 class="playlist-header">Playlist</h2>
+          <ul class="song-list">
+            <li data-src="assets/sounds/Aqua Caelestis.mp3" data-name="Aqua Caelestis" data-index="0"><span>Aqua Caelestis<button class="play" id="play-pause"><i class="fas fa-play"></i></button></span></li>
+            <li data-src="assets/sounds/Ennio Morricone.mp3" data-name="Ennio Morricone" data-index="1"><span>Ennio Morricone<button class="play" id="play-pause"><i class="fas fa-play"></i></button></span></li>
+            <li data-src="assets/sounds/River Flows In You.mp3" data-name="River Flows In You" data-index="2"><span>River Flows In You<button class="play" id="play-pause"><i class="fas fa-play"></i></button></button></span></li>
+            <li data-src="assets/sounds/Summer Wind.mp3" data-name="Summer Wind" data-index="3"><span>Summer Wind<button class="play" id="play-pause"><i class="fas fa-play"></i></button></span></li>
+          </ul>
+          <audio src="assets/sounds"></audio>
+        </div>
+      </div>
+    </div>
+    
+    <div class="weather visible-block">
+      <input type="text" class="city" value="Minsk" placeholder="Enter city name" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slidePrev slider-icon" onclick="getSlidePrev()"></button>
+      <button class="slideNext slider-icon" onclick="getSlideNext()"></button>
+    </div>
+    <time class="time visible-block"></time>
+    <date class="date visible-block"></date>
+    <div class="greeting-container visible-block">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter your name]">
+    </div>
+  </main>
+  <footer class="footer">
+
+    <div class="menu-wrapper">
+      <div class="content">
+        <ul class="menu">
+          <li class="item">            
+            <button class="todo-list-btn"><i class="uil uil-check"></i></button>
+          </li>
+          <li class="item">
+            <button class="player-container-btn"><i class="uil uil-music"></i></button>
+          </li>
+          <li class="item">
+            <button class="weather-btn"><i class="uil uil-cloud"></i></button>
+          </li>
+          <li class="item">
+            <button class="time-btn"><i class="uil uil-clock"></i></button>
+          </li>
+          <li class="item">
+            <button class="date-btn"><i class="uil uil-table"></i></button>
+          </li>
+          <li class="item">
+            <button class="greeting-container-btn"><i class="uil uil-user"></i></button>
+          </li>
+          <li class="item">
+            <button class="quote-btn"><i class="uil uil-book"></i></button>
+          </li>
+          <li class="item">
+            <button class="langswitch" onclick="showGreeting()" onclick="randQuote()"><i class="uil uil-language"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-block visible-block">    
+    <button class="change-quote"></button>
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>      
+  </div>     
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
